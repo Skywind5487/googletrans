@@ -38,15 +38,15 @@ with open("requirements.txt", encoding="utf-8") as r:
 
 
 setup(
-    name='googletrans-py',
+    name='googletrans-sw',
     version=get_version(),
     description=get_description(),
     long_description=get_readme(),
     license='MIT',
     long_description_content_type="text/markdown",
-    author='StarkProgrammer',
-    author_email='starkbotsindustries@gmail.com',
-    url='https://github.com/StarkBotsIndustries/googletrans',
+    author='Skywind5487',
+    author_email='skywind5487@gmail.com',
+    url='https://github.com/Skywind5487/googletrans',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Education',

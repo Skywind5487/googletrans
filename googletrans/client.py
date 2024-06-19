@@ -30,7 +30,7 @@ class Translator:
     def __init__(self, service_urls=DEFAULT_CLIENT_SERVICE_URLS, user_agent=DEFAULT_USER_AGENT,
                  raise_exception=DEFAULT_RAISE_EXCEPTION,
                  proxies: typing.Dict[str, httpcore._sync.interfaces.RequestInterface] = None,
-                 timeout: Timeout = None,
+                 timeout: Timeout = 10.0,
                  http2=True,
                  use_fallback=False):
 
@@ -142,7 +142,9 @@ class Translator:
 
         return extra
 
-    def translate(self, text: str, dest='en', src='auto'):
+    def translate(self, text: str, dest='en', src='auto',timeout = None):
+        if timeout is not None:
+            self.client.timeout = timeout
         dest = dest.lower().split('_', 1)[0]
         src = src.lower().split('_', 1)[0]
 

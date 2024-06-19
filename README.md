@@ -17,9 +17,11 @@ pip install googletrans-sw
 
 ### Repository
 
-You can also install the project directly from this repository.
+You can also install the project directly from this repository.For the newer version.
 
-
+```shell
+pip install git+https://github.com/Skywind5487/googletrans.git --user
+```
 
 ## Credits
 
